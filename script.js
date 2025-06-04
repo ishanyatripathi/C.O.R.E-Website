@@ -3,12 +3,13 @@ document.getElementById("signup-form").addEventListener("submit", function (e) {
   const email = document.getElementById("email").value;
 
   fetch("https://script.google.com/macros/s/AKfycbyHnQ0FfFinqiU84vlNJApOqTdhLJW2IrTgNN6qDo0LEYP6vuOMFYKYnlcRRmMk1m4/exec", {
-    method: "POST",
-    body: JSON.stringify({ email: email }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
+  method: "POST",
+  body: JSON.stringify({ email }),
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
+
     .then(res => res.json())
     .then(() => {
       alert("Thank you! You can now download C.O.R.E.");
