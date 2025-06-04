@@ -2,14 +2,11 @@ document.getElementById("signup-form").addEventListener("submit", function (e) {
   e.preventDefault();
   const email = document.getElementById("email").value;
 
-  const formData = new URLSearchParams();
-  formData.append("email", email);
-
   fetch("https://script.google.com/macros/s/AKfycbyHnQ0FfFinqiU84vlNJApOqTdhLJW2IrTgNN6qDo0LEYP6vuOMFYKYnlcRRmMk1m4/exec", {
     method: "POST",
-    body: formData.toString(),
+    body: JSON.stringify({ email }),
     headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
+      "Content-Type": "application/json",  // IMPORTANT: tell server it's JSON
     },
   })
   .then(res => {
