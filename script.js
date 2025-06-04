@@ -2,7 +2,7 @@ document.getElementById("signup-form").addEventListener("submit", function (e) {
   e.preventDefault();
   const email = document.getElementById("email").value;
 
-  fetch("https://script.google.com/macros/s/AKfycby-W2OOaFuLO-oEIJ6phRVXMITnW6HgODxZ73hVRD99qztXbBBUXG8oT0UBgCteyK9l/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxHC_EzrHlln9CKbmY3dZpZGJJPWFqVEyXcLwGqKgQ7NYeM_KVycJeeYMc0_Mo7ERI/exec", {
     method: "POST",
     body: JSON.stringify({ email }),
     headers: {
