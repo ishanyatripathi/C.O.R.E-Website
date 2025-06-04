@@ -12,7 +12,7 @@ document.getElementById("signup-form").addEventListener("submit", function (e) {
     .then(res => res.json())
     .then(() => {
       alert("Thank you! You can now download C.O.R.E.");
-      document.getElementById("download").style.display = "block";
+      window.location.href = "https://github.com/ishanyatripathi/CORE-Website/releases/download/v1.0/CORE_v1.zip";
     })
     .catch(err => {
       alert("Something went wrong.");
