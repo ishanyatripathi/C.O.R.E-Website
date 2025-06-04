@@ -1,31 +1,36 @@
 document.getElementById("signup-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const email = document.getElementById("email").value.trim();
+  e.preventDefault(); // stop default form submission
+
+  const email = document.getElementById("email").value;
   if (!email) {
     alert("Please enter a valid email.");
     return;
   }
 
-  const callbackName = "jsonpCallback_" + Date.now();
+  console.log("Submit clicked with email:", email);
 
-  // Create a temporary global callback function
-  window[callbackName] = function (data) {
-    if (data.result === "success") {
-      alert("Thank you! You can now download C.O.R.E.");
-      document.getElementById("download").style.display = "block";
-    } else {
-      alert("Server error: " + (data.message || "Unknown error"));
-    }
-
-    // Clean up
-    const script = document.getElementById(callbackName);
-    if (script) script.remove();
-    delete window[callbackName];
-  };
-
-  // Create a <script> tag to request the data using JSONP
-  const script = document.createElement("script");
-  script.id = callbackName;
-  script.src = `https://script.google.com/macros/s/AKfycbyHnQ0FfFinqiU84vlNJApOqTdhLJW2IrTgNN6qDo0LEYP6vuOMFYKYnlcRRmMk1m4/exec?email=${encodeURIComponent(email)}&callback=${callbackName}`;
-  document.body.appendChild(script);
+  fetch("https://script.google.com/macros/s/AKfycbyHnQ0FfFinqiU84vlNJApOqTdhLJW2IrTgNN6qDo0LEYP6vuOMFYKYnlcRRmMk1m4/exec", {
+    method: "POST",
+    body: JSON.stringify({ email }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error("Network response was not ok: " + res.status);
+      return res.json();
+    })
+    .then((data) => {
+      if (data.result === "success") {
+        alert("Thank you! You can now download C.O.R.E.");
+        window.location.href =
+          "https://github.com/ishanyatripathi/CORE-Website/releases/download/v1.0/CORE_v1.zip";
+      } else {
+        alert("Server error: " + data.message);
+      }
+    })
+    .catch((err) => {
+      alert("Something went wrong: " + err.message);
+      console.error(err);
+    });
 });
