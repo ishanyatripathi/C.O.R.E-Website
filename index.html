@@ -3,18 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About C.O.R.E.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <title>C.O.R.E.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      min-height: 100vh;
+      height: 100vh;
       background-color: #0a0a0a;
       color: #00fff7;
       font-family: 'Orbitron', sans-serif;
-      padding: 60px 40px 40px 60px;
-      text-align: left;
-      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 0;
+      letter-spacing: 0.2rem;
+      text-shadow: 0 0 20px #00fff7;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      color: #77fdfd;
+      letter-spacing: 0.1rem;
+      animation: fadeIn 2s ease-in-out;
     }
 
     nav {
@@ -34,55 +52,6 @@
 
     nav a:hover {
       text-shadow: 0 0 10px #00fff7;
-    }
-
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      letter-spacing: 0.2rem;
-      text-shadow: 0 0 20px #00fff7;
-      animation: fadeIn 1.5s ease-in-out forwards;
-      opacity: 0;
-    }
-
-    .content-container {
-      display: flex;
-      gap: 100px; /* increased gap to push video more right */
-      align-items: flex-start;
-      margin-top: 20px;
-      flex-wrap: wrap;
-      padding-right: 40px; /* optional extra right padding */
-    }
-
-    .text-content {
-      flex: 1 1 400px;
-      max-width: 800px;
-      animation: fadeIn 2s ease forwards;
-      opacity: 0;
-      animation-delay: 0.5s;
-    }
-
-    .text-content p {
-      font-size: 1.3rem;
-      color: #77fdfd;
-      letter-spacing: 0.1rem;
-      margin-bottom: 20px;
-    }
-
-    .video-container {
-      flex: 0 0 400px;
-      margin-left: 60px; /* added left margin to push video more right */
-      animation: fadeIn 2s ease forwards;
-      opacity: 0;
-      animation-delay: 1s;
-    }
-
-    iframe {
-      width: 100%;
-      height: 315px; /* match your given iframe height */
-      border-radius: 12px;
-      box-shadow: 0 0 20px #00fff7;
-      border: none;
     }
 
     @keyframes fadeIn {
@@ -108,38 +77,9 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <h1>About C.O.R.E.</h1>
-
-  <div class="content-container">
-    <div class="text-content">
-      <p>
-        C.O.R.E. (Cognitive Optimized Responsive Entity) is a cutting-edge AI assistant built to revolutionize the way you interact with technology. 
-        Designed with adaptability and intelligence at its core, C.O.R.E. seamlessly integrates into your daily workflow, automating tasks and anticipating your needs.
-      </p>
-
-      <p>
-        Utilizing advanced algorithms and responsive machine learning, C.O.R.E. continuously learns from user interactions to provide a highly personalized experience.
-        Whether managing schedules, controlling smart devices, or assisting with complex problem-solving, C.O.R.E. empowers users to achieve more with less effort.
-      </p>
-
-      <p>
-        Our vision is to create an intuitive AI companion that not only responds but understands context, emotions, and preferences—making technology truly human-centric.
-        As the digital landscape evolves, C.O.R.E. stands at the forefront, ready to adapt, optimize, and enhance your productivity and creativity.
-      </p>
-    </div>
-
-    <div class="video-container">
-      <iframe
-        width="560" height="315"
-        src="https://www.youtube.com/embed/dllZjtPFAe4"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
+  <!-- Centered Content -->
+  <h1>C.O.R.E.</h1>
+  <p>Cognitive Optimized Responsive Entity</p>
 
 </body>
 </html>
