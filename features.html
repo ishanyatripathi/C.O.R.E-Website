@@ -2,43 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>C.O.R.E.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>C.O.R.E. - Features</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       background-color: #0a0a0a;
       color: #00fff7;
       font-family: 'Orbitron', sans-serif;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       flex-direction: column;
-    }
-
-    h1 {
-      font-size: 5rem;
-      margin-bottom: 0;
-      letter-spacing: 0.2rem;
-      text-shadow: 0 0 20px #00fff7;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    p {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      color: #77fdfd;
-      letter-spacing: 0.1rem;
-      animation: fadeIn 2s ease-in-out;
+      align-items: center;
+      padding: 40px 20px;
     }
 
     nav {
-      position: absolute;
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
       top: 20px;
       right: 40px;
+      z-index: 100;
     }
 
     nav a {
@@ -54,14 +42,86 @@
       text-shadow: 0 0 10px #00fff7;
     }
 
-    @keyframes fadeIn {
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 30px;
+      letter-spacing: 0.3rem;
+      text-shadow: 0 0 25px #00fff7;
+      animation: fadeInDown 1.5s ease forwards;
+    }
+
+    .features-list {
+      max-width: 900px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px 50px;
+      padding: 0 10px;
+    }
+
+    .feature-item {
+      background: rgba(0, 255, 247, 0.1);
+      border: 1.5px solid #00fff7;
+      border-radius: 12px;
+      padding: 20px 25px;
+      box-shadow: 0 0 15px rgba(0, 255, 247, 0.4);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .feature-item:nth-child(1) { animation-delay: 0.2s; }
+    .feature-item:nth-child(2) { animation-delay: 0.4s; }
+    .feature-item:nth-child(3) { animation-delay: 0.6s; }
+    .feature-item:nth-child(4) { animation-delay: 0.8s; }
+    .feature-item:nth-child(5) { animation-delay: 1.0s; }
+    .feature-item:nth-child(6) { animation-delay: 1.2s; }
+    .feature-item:nth-child(7) { animation-delay: 1.4s; }
+    .feature-item:nth-child(8) { animation-delay: 1.6s; }
+    .feature-item:nth-child(9) { animation-delay: 1.8s; }
+    .feature-item:nth-child(10) { animation-delay: 2.0s; }
+
+    .feature-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #00fff7;
+      text-shadow: 0 0 6px #00fff7;
+    }
+
+    .feature-desc {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #77fdfd;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(-20px);
       }
       to {
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .features-list {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        right: 20px;
+      }
+      h1 {
+        font-size: 3rem;
       }
     }
   </style>
@@ -77,9 +137,50 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Centered Content -->
-  <h1>C.O.R.E.</h1>
-  <p>Cognitive Optimized Responsive Entity</p>
+  <h1>Features</h1>
+
+  <div class="features-list">
+    <div class="feature-item">
+      <div class="feature-title">Voice Command Understanding</div>
+      <div class="feature-desc">Seamlessly interprets your voice commands to perform real-time system actions with accuracy.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Natural Language Interaction</div>
+      <div class="feature-desc">Responds conversationally using natural language for an intuitive and human-like experience.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Gesture-Based File Transfer</div>
+      <div class="feature-desc">Innovative gesture recognition enables quick and effortless file transfers without clicks.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Dynamic Real-Time Interface</div>
+      <div class="feature-desc">The interface updates smoothly and instantly, reflecting actions and system status in real time.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Smooth Transitions & Animations</div>
+      <div class="feature-desc">Polished UI transitions create an elegant and engaging user experience.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Advanced Speech Recognition</div>
+      <div class="feature-desc">Utilizes built-in speech recognition technology for fast and reliable voice inputs.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Multimodal Fusion</div>
+      <div class="feature-desc">Combines speech, gesture, and system automation into a single cohesive control system.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Cutting-Edge Technology Stack</div>
+      <div class="feature-desc">Built with Python, PyQt5, OpenCV, Groq AI acceleration, and LLaMA3 for maximum performance.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Fast & Future-Ready</div>
+      <div class="feature-desc">Designed to be responsive and scalable, keeping pace with evolving user needs and tech advancements.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Offline Command Processing</div>
+      <div class="feature-desc">Processes common commands locally without internet, ensuring fast response and enhanced privacy.</div>
+    </div>
+  </div>
 
 </body>
 </html>
