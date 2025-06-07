@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - C.O.R.E.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;          /* Full viewport height */
+      background-color: #0a0a0a;
+      color: #00fff7;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;          /* Use flexbox */
+      justify-content: center; /* Center horizontally */
+      align-items: center;    /* Center vertically */
+      padding: 40px;
+      text-align: center;
+      position: relative;     /* For nav absolute positioning */
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      z-index: 10;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #00fff7;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 10px #00fff7;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      letter-spacing: 0.2rem;
+      text-shadow: 0 0 20px #00fff7;
+      animation: fadeIn 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    p.intro {
+      font-size: 1.5rem;
+      color: #77fdfd;
+      letter-spacing: 0.1rem;
+      margin-bottom: 40px;
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+      animation-delay: 0.5s;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 1.3rem;
+      animation: fadeIn 2.5s ease forwards;
+      opacity: 0;
+      animation-delay: 1s;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-links a {
+      color: #00fff7;
+      text-decoration: none;
+      font-weight: 700;
+      text-shadow: 0 0 8px #00fff7;
+      transition: all 0.3s ease;
+      word-break: break-word;
+    }
+
+    .contact-links a:hover {
+      text-shadow: 0 0 20px #00fff7;
+      color: #55ffff;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="features.html">Features</a>
+    <a href="download.html">Download</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div>
+    <h1>Let’s Connect</h1>
+    <p class="intro">I’m always open to new ideas, collaborations, or just a quick hello. Reach out anytime!</p>
+
+    <div class="contact-links">
+      <a href="mailto:ishanya.tripathi15@gmail.com" target="_blank" rel="noopener">Email: ishanya.tripathi15@gmail.com</a>
+      <a href="https://www.linkedin.com/in/ishanya-tripathi-48a869293/" target="_blank" rel="noopener">LinkedIn: Ishanya Tripathi</a>
+      <a href="https://github.com/ishanyatripathi" target="_blank" rel="noopener">GitHub: Ishanya Tripathi</a>
+    </div>
+  </div>
+
+</body>
+</html>
