@@ -1,4 +1,4 @@
-const webAppUrl = "https://script.google.com/macros/s/AKfycbxyle0NdBrv8AlEUPsxaVUPDrfb-E-cxoGJ1CY54obj1kIkw1cE9eJX_yZN5DgSMPWS/exec"; // Replace this with your actual Web App URL
+const webAppUrl = "https://script.google.com/macros/s/AKfycbzHCq4CGyg_UEnrmS1VrJ8JZfbjWDJ0VMX0Qc5PXMtyCsrzC55EIiQfACNm_I7NyYch/exec"; // Replace this with your actual Web App URL
 
 document.getElementById("signup-form").addEventListener("submit", function (e) {
   e.preventDefault();
