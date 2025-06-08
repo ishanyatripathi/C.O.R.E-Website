@@ -6,12 +6,28 @@
   <title>C.O.R.E. - Contact</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
   <style>
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     body {
       margin: 0;
       padding: 40px 20px;
       background-color: #0a0a0a;
       color: #00fff7;
       font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .fade-container {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      width: 100%;
+      max-width: 900px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -46,6 +62,7 @@
       margin-top: 100px;
       margin-bottom: 10px;
       text-shadow: 0 0 20px #00fff7;
+      text-align: center;
     }
 
     p.subheading {
@@ -62,6 +79,7 @@
       flex-wrap: wrap;
       justify-content: center;
       max-width: 900px;
+      width: 100%;
     }
 
     .team-card {
@@ -90,6 +108,7 @@
       font-size: 0.95rem;
       color: #77fdfd;
       margin-bottom: 15px;
+      word-break: break-word;
     }
 
     .team-links a {
@@ -131,29 +150,33 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Main Heading -->
-  <h1>Connect with the Team</h1>
-  <p class="subheading">We are always open to new ideas, collaborations, or just a quick hello. Reach out anytime.</p>
+  <div class="fade-container">
 
-  <!-- Team Cards -->
-  <div class="team-container">
-    <div class="team-card">
-      <div class="team-name">Ishanya Tripathi</div>
-      <div class="team-email">ishanya.tripathi15@gmail.com</div>
-      <div class="team-links">
-        <a href="https://www.linkedin.com/in/ishanya-tripathi-48a869293/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/ishanyatripathi" target="_blank">GitHub</a>
+    <!-- Main Heading -->
+    <h1>Connect with the Team</h1>
+    <p class="subheading">We are always open to new ideas, collaborations, or just a quick hello. Reach out anytime.</p>
+
+    <!-- Team Cards -->
+    <div class="team-container">
+      <div class="team-card">
+        <div class="team-name">Ishanya Tripathi</div>
+        <div class="team-email">ishanya.tripathi15@gmail.com</div>
+        <div class="team-links">
+          <a href="https://www.linkedin.com/in/ishanya-tripathi-48a869293/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/ishanyatripathi" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-name">Ved Tripathi</div>
+        <div class="team-email">vedsuniltripathi@gmail.com</div>
+        <div class="team-links">
+          <a href="https://www.linkedin.com/in/ved-tripathi01/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/veDoDev" target="_blank">GitHub</a>
+        </div>
       </div>
     </div>
 
-    <div class="team-card">
-      <div class="team-name">Ved Tripathi</div>
-      <div class="team-email">vedsuniltripathi@gmail.com</div>
-      <div class="team-links">
-        <a href="https://www.linkedin.com/in/ved-tripathi01/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/veDoDev" target="_blank">GitHub</a>
-      </div>
-    </div>
   </div>
 
 </body>
