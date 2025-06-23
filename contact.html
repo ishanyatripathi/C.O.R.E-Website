@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>C.O.R.E. - Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="cursor.css" />
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #0a0a0a;
+      color: #00fff7;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .fade-container {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation-delay: 0.3s;
+    }
+
+    nav {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
+      top: 20px;
+      right: 40px;
+      z-index: 100;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #00fff7;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 10px #00fff7;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 100px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 20px #00fff7;
+      text-align: center;
+    }
+
+    p.subheading {
+      font-size: 1.1rem;
+      color: #77fdfd;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .team-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .team-card {
+      background: rgba(0, 255, 247, 0.08);
+      border: 1.5px solid #00fff7;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 20px rgba(0, 255, 247, 0.3);
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 255, 247, 0.6);
+    }
+
+    .team-name {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 8px #00fff7;
+    }
+
+    .team-email {
+      font-size: 0.95rem;
+      color: #77fdfd;
+      margin-bottom: 15px;
+      word-break: break-word;
+    }
+
+    .team-links a {
+      display: inline-block;
+      margin: 5px 10px;
+      color: #00fff7;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border: 1px solid #00fff7;
+      padding: 5px 10px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .team-links a:hover {
+      background-color: #00fff7;
+      color: #0a0a0a;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .team-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="features.html">Features</a>
+    <a href="download.html">Download</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="fade-container">
+
+    <h1>Connect with the Team</h1>
+    <p class="subheading">
+      We are always open to new ideas, collaborations, or just a quick hello. Reach out anytime.
+    </p>
+
+    <div class="team-container">
+      <div class="team-card">
+        <div class="team-name">Ishanya Tripathi</div>
+        <div class="team-email">ishanya.tripathi15@gmail.com</div>
+        <div class="team-links">
+          <a href="https://www.linkedin.com/in/ishanya-tripathi-48a869293/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/ishanyatripathi" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-name">Ved Tripathi</div>
+        <div class="team-email">vedsuniltripathi@gmail.com</div>
+        <div class="team-links">
+          <a href="https://www.linkedin.com/in/ved-tripathi01/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/veDoDev" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="cursor.js"></script>
+</body>
+</html>
