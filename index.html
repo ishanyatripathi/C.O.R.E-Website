@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-  @media (min-width: 1025px) {
-    body {
-      cursor: none;
-    }
-
-    .cursor {
-      position: fixed;
-      width: 16px;
-      height: 16px;
-      background: #5AC8FA;
-      border: 2px solid white;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transition: transform 0.1s ease;
-      transform: translate(-50%, -50%);
-      mix-blend-mode: difference;
-    }
-  }
-</style>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C.O.R.E.</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
   <style>
+    /* Cursor Styling */
+    @media (min-width: 1025px) {
+      body {
+        cursor: none;
+      }
+
+      .cursor {
+        position: fixed;
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        border: 2px solid #00fff7;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.1s ease;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+      }
+    }
+
+    /* Page Styling */
     body {
       margin: 0;
       height: 100vh;
@@ -99,9 +100,21 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- Custom Cursor -->
+  <div class="cursor" id="customCursor"></div>
+
   <!-- Centered Content -->
   <h1>C.O.R.E.</h1>
   <p>Cognitive Optimized Responsive Entity</p>
+
+  <!-- Cursor Script -->
+  <script>
+    const cursor = document.getElementById("customCursor");
+    document.addEventListener("mousemove", e => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+  </script>
 
 </body>
 </html>
