@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+  @media (min-width: 1025px) {
+    body {
+      cursor: none;
+    }
+
+    .cursor {
+      position: fixed;
+      width: 16px;
+      height: 16px;
+      background: #5AC8FA;
+      border: 2px solid white;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.1s ease;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: difference;
+    }
+  }
+</style>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About C.O.R.E.</title>
