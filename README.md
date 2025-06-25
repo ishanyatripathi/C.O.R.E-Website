@@ -1,4 +1,3 @@
-
 # 🌐 C.O.R.E. Website
 
 **C.O.R.E. (Cognitive Optimized Responsive Entity)** is a futuristic AI assistant built to enable intuitive gesture, voice, and automation-based control over digital tasks. This repository hosts the official website of C.O.R.E., showcasing its features, interactive demos, and project insights.
