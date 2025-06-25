@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/de831d96-8039-4e82-a8a6-5082513bfc72)
+
 
 # 🌐 C.O.R.E. Website
 
